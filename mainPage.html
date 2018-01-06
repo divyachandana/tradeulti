@@ -1,0 +1,169 @@
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <h1 class="text-uppercase" style="color:white">tradeulti</h1>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="nav navbar-nav">
+        <li ng-class="isActive=='home' ? 'active':''">
+          <a ng-click="isActive='home'">HOME</a>
+        </li>
+        <li ng-class="isActive=='career' ? 'active':''">
+          <a ng-click="isActive='career'">CAREERS</a>
+        </li>
+        <li ng-class="isActive=='contact' ? 'active':''">
+          <a ng-click="isActive='contact'">CONTACT</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="margin-top:100px;">
+  <div class="row">
+
+    <div class="col-md-12" ng-show="isActive=='home'">
+      <h1 style="text-align:center">home</h1>
+      <div style="text-align:center">
+        this is for testing top menu<br/><br /><br /><br /><br /><br /><br /><br />
+        this is for testing top menu<br/><br /><br /><br /><br /><br /><br /><br />
+        this is for testing top menu<br/><br /><br /><br /><br /><br /><br /><br />
+        this is for testing top menu<br/><br /><br /><br /><br /><br /><br /><br />
+        this is for testing top menu<br/><br /><br /><br /><br /><br /><br /><br />
+        this is for testing top menu<br/><br /><br /><br /><br /><br /><br /><br />
+        this is for testing top menu<br/><br /><br /><br /><br /><br /><br /><br />
+
+      </div>
+
+    </div>
+
+    <div class="col-md-12" ng-show="isActive=='career'">
+      <h1 style="text-align:center">career</h1>
+    </div>
+
+    <div class="col-md-12" ng-show="isActive=='contact'">
+      <h1>contact</h1>
+
+
+
+      <div class="row">
+        <div class="col-md-6">
+
+          <!-- <div class="row">
+          </div> -->
+
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="selectCountry">Continent : </label>
+                <select class="form-control" id="selectCountry"
+                ng-options="continent.geonameId as continent.name for continent in continents"
+                ng-model="continentSelected" ng-click="loadCountries(continentSelected)">
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="selectCountry">Country : </label>
+                <select class="form-control"
+                ng-options="country.geonameId as country.name for country in countries"
+                ng-model="countrySelected" ng-click="loadStates(countrySelected)">
+
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="selectCountry">State : </label>
+                <select class="form-control"
+                ng-options="state.geonameId as state.name for state in states"
+                ng-model="stateSelected" ng-click="loadDistrict(stateSelected)">
+
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="selectCountry">District : </label>
+                <select class="form-control"
+                ng-options="district.geonameId as district.name for district in districts"
+                ng-model="districtSelected" ng-click="loadCity(districtSelected)">
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="selectCountry">City : </label>
+                <select class="form-control"
+                ng-options="city.geonameId as city.name for city in cities"
+                ng-model="citySelected">
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+             <div class="col-md-8">
+               <div class="control-group form-group">
+                 <div class="controls">
+                   <label>Branches</label>
+                   <br />
+                   <select style="width:100%;"
+                   id="branchSelect"
+                   ng-change="branchsel()"
+                     ng-options="branch as branch for branch in selectList track by branch"
+                     ng-model="selectedItems"
+                     multiple
+                     chosen
+                     class="chosen-select"
+                     data-placeholder="Choose your branch..."></select>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="selectCountry">Address : </label>
+                <textarea class="form-control" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="selectCountry">Branches : </label>
+                <select class="form-control" id="selectCountry" ng-model="country">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+            </div>
+          </div> -->
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
